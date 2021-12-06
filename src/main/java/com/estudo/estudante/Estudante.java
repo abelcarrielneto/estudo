@@ -8,15 +8,7 @@ import java.time.Period;
 @Table
 public class Estudante {
     @Id
-    @SequenceGenerator(
-            name = "student_sequence",
-            sequenceName = "student_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "student_sequence"
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nome;
     private String email;
